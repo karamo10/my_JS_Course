@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            padding: 20px;
+            line-height: 1.4;
+        }
+        .dark-mode{
+            background-color: rgb(20, 20, 20);
+            color: white;
+            /* border: 2px solid blue; */
+            transition: 0.3s;
+        }
+        #dark{
+            padding: 15px 30px;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            cursor: pointer;
+            border: 0;
+            background-color: black;
+            color: white;
+        }
+        
+        input{
+            padding: 8px;
+            font-size: 15px;
+        }
+        button{
+            padding: 8px;
+        }
+        #demo,
+        #demo2{
+            margin-top: 10px;
+        }
+        p{
+            font-size: 17px;
+        }
+        .p2{
+           margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <button id="dark" onclick="dark()">Dark</button>
+    </nav>
+    <h1>Operators</h1>
+    <!-- example one -->
+    <h6>Please enter your age in the input</h6>
+    <input type="text" id="myInput" value="18">
+    <button onclick="clickMe()">Send</button>
+    <p id="demo"></p>
+
+    <!-- example two -->
+     <h6 class="p2">Shipment cost below 40<i>GMD</i> <br> will paid a shipment fee of 10<i>GMD</i></h6>
+     <input type="text" id="myInput2" placeholder="Enter your shipment value">
+     <button onclick="submitMe()">Enter</button>
+     <p id="demo2"></p>
+    <script src="script.js"></script>
+</body>
+</html>

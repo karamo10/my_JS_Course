@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators example</title>
+</head>
+<style>
+    body{
+        background-color: #575757;
+    }
+</style>
+<body>
+    
+
+    <script>
+        // Arithmetic operators example
+
+                               // EXAMPLE ONE
+        // Calculating my daily data usage cost
+        let totalDataUsageCose = 0;  // initialize total cost in GMD
+ 
+        totalDataUsageCose += 25;  // Spends 25 GMD on data today
+
+        totalDataUsageCose += 30;  // Spends 30 GMD on data next day
+        console.log(`The user spends ${totalDataUsageCose} GMD on internet data in two days`);
+
+                              // EXAMPLE TWO
+        // Calculating discount on subscription plans
+        let monthlySubsriptionCost = 300;
+        let discount = 0.1;
+
+        // applly the discount to the monthly subscription
+        monthlySubsriptionCost -= monthlySubsriptionCost * discount;
+        console.log(`The user will pay ${monthlySubsriptionCost} GMB for monthly subscription`);
+        
+                              // EXAMPLE THREE
+        // Shopping account balance
+        // Scenario: User Makes a Purchase
+        // Initial balance: The user has a certain amount of money in their shopping account.
+        // Shopping cart: The user selects multiple items to buy.
+        // Tax calculation: Apply a tax rate to the total cost.
+        // Final deduction: Update the user's balance after completing the purchase.
+        let shoppingAccountBalance = 1000; // GMD
+
+        let item1 = 200;
+        let item2 = 250;
+        let item3 = 400;
+
+        let totalItemCost = item1 + item2 + item3;
+        console.log(`Total cost of items: ${totalItemCost} GMD`);
+
+        // Apply a tax of 15% to the total cost
+        let taxRate = 0.15;
+        let taxAmount = totalItemCost * taxRate;
+        console.log(`Tax amount: ${taxAmount} GMD`);
+
+
+        // Calculate the final amount the user needs to pay
+        let finalAmount = totalItemCost + taxAmount;
+        console.log(`Final amount to be deducted: ${finalAmount} GMD`);
+
+        // Calculate the final amount from the user's shopping acount balance
+        let remainingBalance = shoppingAccountBalance -= finalAmount;
+        console.log(`Remaining balance: ${remainingBalance} GMB`);
+
+    </script>
+</body>
+</html>
