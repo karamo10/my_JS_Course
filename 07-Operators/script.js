@@ -570,3 +570,18 @@ function dark(){
 // if(codedBy ==! "Ebrima"){
 //        console.log("This is not coded by ebrima");
 // }
+
+function canPurchase(balance, itemPrice) {
+
+       if((balance === itemPrice)) {
+              console.log("Purchase Comfirmed");
+       }else if(balance > itemPrice) {
+              console.log("Purchase Comfirmed");
+       }
+       else{
+              console.log("Purchase Denied");
+       }
+}
+// output "Purchase Denied"
+
+canPurchase(50, 100);

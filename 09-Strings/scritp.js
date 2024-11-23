@@ -254,7 +254,18 @@ const index2 = str.indexOf("bye");
 // Since "bye" is not found in str, indexOf() returns -1.
 console.log(index2); // Output: -1
 
-// eg 3
+// eg3 
+const isJane = "Hello, my name is Jane";
+// const index3 = isJane.indexOf("my");
+if(isJane.indexOf("Jane") === 18){
+    console.log("That's Jane");
+}
+else{
+    console.log("That's not Jane");
+}
+// output 'That's Jane'  /* because the index of "Jane" is 18 */
+
+// eg 4
 // In simple form validation, you can use indexOf() to check if an email address contains an "@" symbol. While this is a basic check (not a full email validation), it’s a quick way to catch common mistakes.
 
 function isValidEmail(email) {
@@ -267,7 +278,7 @@ function isValidEmail(email) {
 console.log(isValidEmail("test@example.com"));
 console.log(isValidEmail("invalidEmail.com"));
 
-
+// eg 5
 
 // 5: .Substring()     **************************      .Substring()
 // eg 1
@@ -357,20 +368,19 @@ let rep = "How is your day!";
 let reply = rep.replace("is", "was"); /* it replace "is" to "was" */
 
 console.log(rep); 
-console.log(reply);  // output "How way your day"
-
+console.log(reply);  // output "How was your day"
+y
 // eg 2
 // Input Sanitization: Use .replace() to remove or replace unwanted characters from user input (e.g., sanitizing form data).
 
 function sanitizeInput(input) {
-
-    return input.replace(/[^a-zA-Z0-9\s]/g, '');
+    return input.replace(/[^a-zA-Z0-9\s!]/g, '');
 }
 
-let inputUser = "Pabi Camar@a20@24!";
+let inputUser = "John Ph!ils20@23!";
 const sanitizedInput = sanitizeInput(inputUser);
 
-console.log(sanitizedInput);
+console.log(sanitizedInput); // output "John Phils2023"
 
 // eg 3
 function  replaceCharacters(myInput) {
@@ -391,11 +401,10 @@ let newStr = originalStr.replace("World", "Gambia");
 console.log(newStr);  // output "Hello, Gambia"
 
 // eg 5
-let text = "Hello, World! Welcome to the world";
+let text = "Hello, World! Welcome to the smiling coast of West world";
 
 let newText = text.replace(/world/gi, "Gambia");
-console.log(newText);  // output "Hello, Gambia! Welcome to the Gambia"
-
+console.log(newText);  // output "Hello, Gambia! Welcome to the smiling coast of West Gambia"
 
 // eg 6
 // This flag allows the regular expression to match all occurrences of the pattern in the string, rather than stopping after the first match.
