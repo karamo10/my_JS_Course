@@ -4,13 +4,13 @@
  const fruits = ['apple', 'pear', 'guava'];
  const berries = ['strawberry', 'blueberry', 'rasberry'];
 
-// fruits.push(berries)
+// fruits.push(berries) // This add the array of berries to the fruits array
 
-// Let access the blueberry element
+// Let access the blueberry element with bracket notation
 // x = fruits[3][1]; // output: blueberry
 
 // Nested arry, array inside an array
-const allFruit = [fruits, berries];
+const allFruit = [fruits, berries]; // output : [["apple", "pear", "guava"], ["strawberry", "blueberry",
 
 x = allFruit[0][1]; // output: pear
 
@@ -34,7 +34,6 @@ x = Array.isArray(fruits) // output: true
 x = Array.isArray('Hello') // output: false beacuse it is a string
 // returns false if the argument is not an array
 // console.log(fruits);
-
 
 x = Array.from('12345'); // output: [ '1', '2', '3', '4', '5' ]
 // converts a string into an array

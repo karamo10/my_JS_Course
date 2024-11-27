@@ -20,7 +20,7 @@ arr.reverse(); // output: [17, 12, 45, 23]
 
 console.log(arr);
 
-// NOTE: This methods are use to manipulte the current arrays MEANINIG we can use those (methods) above to perform various actions on an array, like adding, removing, or changing its elements. Here are some common array methods:
+// NOTE: This methods are use to manipulte the current arrays MEANINIG we can use those (methods) above to perform various actions on an array, like adding, removing, or changing its elements.
 
 
 // This batch of methods are the one's we can used to get something from it like get information about the array
@@ -30,7 +30,7 @@ x = arr.includes(46); // returns true 'You always get true if the value is found
 
 // Let say arr = [17, 12, 45, 23] this happend because of the .reverse() method
 
-// since the array is using the 
+// Since the array is zero base index
 x = arr.indexOf(17); // output: 0 
 // 2. indexOf(): Returns the first index at which a given element can be found in the array, or -1 if it is not present.
 
@@ -40,9 +40,9 @@ x = arr.indexOf(17); // output: 0
 // x = arr.slice(1, 3); // output: [12, 45] NOTE it does not change the original array, it returns a new array which is assign to the variable x
 // 3. slice(): Extracts a section of an array and returns a new array.
 
-// x = arr.splice(1, 3); // output: [12, 45, 23]  NOTE it does change the original array,
+// x = arr.splice(1, 3); // output: [12, 45, 23]; NOTE it changes the original array, and return an array of remove elements.
 // console.log(x);
-// console.log(arr); // output: [17] As you can see it changes the original array.
+// console.log(arr); // output: [17] 
 
 // x = arr.splice(2, 1) // output: [45] 'after the splice() method the array is [17, 12, 23]'
 // console.log(x);
@@ -50,3 +50,29 @@ x = arr.indexOf(17); // output: 0
 
 x = arr.splice(1, 3).reverse().toString().charAt(0);
 console.log(x); // 2
+
+
+// .splice()  Summary
+
+// The .splice() method in JavaScript modifies the original array by adding, removing, or replacing elements at specific indices. It is a powerful method that gives you more flexibility than .slice(), but it also alters the original array.
+// Removing elements: If you want to remove elements from an array, you can use .splice()
+const numbers = [12, 13, 11, 14];
+const removed = numbers.splice(1, 2); // Start at index 1, remove 2 elements
+
+console.log(numbers); // Output: [12, 14]; (original array is modified)
+console.log(removed); // Output: [13, 11]; (the removed elements)
+
+// egs
+numbers[0] = 100;
+console.log(numbers); // Output: [100, 14]; (the first element is changed)
+const nums = numbers.concat(arr, removed).reverse(); 
+console.log(nums); // Output: [11, 13, 17, 14, 100];
+
+// POINTS
+// It changes the original array.
+// It returns an array of removed elements.
+// Use it when you need to modify the array directly (e.g., remove or replace elements).
+
+/* Difference between .splice() and .slice() */
+// .splice(): Mutates the original array.
+// .slice(): Returns a new array without modifying the original.
